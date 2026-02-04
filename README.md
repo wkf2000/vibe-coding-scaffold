@@ -22,13 +22,13 @@ Frontend: http://localhost:8501
 Backend:
 ```bash
 cd backend
-uv sync
+uv sync --extra dev
 uv run uvicorn app.main:app --reload --port 8000
 ```
 Frontend:
 ```bash
 cd frontend
-uv sync
+uv sync --extra dev
 uv run streamlit run streamlit_app.py --server.port 8501
 ```
 
