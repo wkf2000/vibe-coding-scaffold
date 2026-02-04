@@ -1,0 +1,6 @@
+[project]
+name = "genai-frontend"
+version = "0.1.0"
+description = "Streamlit frontend for GenAI service template (uv)"
+requires-python = ">=3.11"
+dependencies = ["streamlit>=1.32", "httpx>=0.27"]

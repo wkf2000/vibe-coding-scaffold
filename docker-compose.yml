@@ -1,0 +1,3 @@
+# Convenience wrapper
+include:
+  - infra/docker-compose.yml

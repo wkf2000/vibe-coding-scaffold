@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+RUN pip install --no-cache-dir uv
+
+COPY pyproject.toml uv.lock* /app/
+RUN uv sync --frozen || uv sync
+
+COPY streamlit_app.py /app/streamlit_app.py
+
+EXPOSE 8501
+CMD ["uv", "run", "streamlit", "run", "streamlit_app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
